@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Roboto for clean display -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Pomodoro Timer</h1>
+        
+        <div class="timer-container">
+            <div class="progress-ring-container">
+                <svg class="progress-ring" width="300" height="300">
+                    <circle class="progress-ring-background" cx="150" cy="150" r="120" />
+                    <circle class="progress-ring-circle" cx="150" cy="150" r="120" />
+                </svg>
+                <div class="timer-display">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+                <div class="phase-display" id="phase-display">作業時間</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-pause-btn" class="btn start">スタート</button>
+            <button id="reset-btn" class="btn">リセット</button>
+        </div>
+        
+        <div class="stats">
+            <p>今日の完了ポモドーロ: <span id="pomodoro-count">0</span></p>
+        </div>
+        
+        <div class="cycle-indicator">
+            <div class="indicator-dot" id="dot-1"></div>
+            <div class="indicator-dot" id="dot-2"></div>
+            <div class="indicator-dot" id="dot-3"></div>
+            <div class="indicator-dot" id="dot-4"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
